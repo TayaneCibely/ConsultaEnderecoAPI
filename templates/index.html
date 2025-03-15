@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de CEP</title>
+    <!-- Inclui o arquivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Consulta de CEP</h1>
+    <form method="post" action="/consulta-cep">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" required>
+        <button type="submit">Consultar</button>
+    </form>
+
+    <!-- Exibe mensagens de erro -->
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <!-- Exibe os resultados da consulta -->
+    {% if address %}
+        <div class="result">
+            <h2>Resultado:</h2>
+            <p><strong>Bairro:</strong> {{ address.bairro }}</p>
+            <p><strong>CEP:</strong> {{ address.cep }}</p>
+            <p><strong>Cidade:</strong> {{ address.cidade }}</p>
+            <p><strong>Logradouro:</strong> {{ address.logradouro }}</p>
+            <p><strong>UF:</strong> {{ address.uf }}</p>
+            <p><strong>Complemento:</strong> {{ address.complemento }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
