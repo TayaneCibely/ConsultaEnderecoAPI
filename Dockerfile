@@ -1,17 +1,15 @@
-# Usa a imagem oficial do Python como base
-FROM python:3.9
+FROM python:3.9-slim-buster
 
-# Define o diretório de trabalho
 WORKDIR /app
 
-# Copia os arquivos do projeto para o container
-COPY . /app
+# Atualiza o pip e desativa a barra de progresso
+RUN pip install --upgrade pip --progress-bar off
 
-# Instala as dependências
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt --progress-bar off
 
-# Expõe a porta usada pelo Flask
+COPY . .
+
 EXPOSE 5000
 
-# Comando para rodar a aplicação
 CMD ["python", "app.py"]
