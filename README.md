@@ -1,24 +1,28 @@
-# Consulta Endereço API
+# 🗺️ Consulta Endereço via API
 
-Aplicação em Python usando Flask como framework web, Prometheus para coleta de métricas e ViaCEP para consulta de endereços via CEP. O Flask lida com requisições de usuários, enviando o CEP ao ViaCEP, que retorna os dados do endereço. O Prometheus registra métricas como tempo de resposta e número de requisições, exibidas em tempo real no Grafana. As métricas ajudam a identificar gargalos, garantindo eficiência e desempenho.
+Aplicação em Python usando Flask como framework web, Prometheus para coleta de métricas e ViaCEP para consulta de endereços a partir de CEPs. O Flask lida com requisições de usuários, enviando o CEP ao ViaCEP, que retorna os dados do endereço. O Prometheus registra métricas como tempo de resposta e número de requisições, exibidas em tempo real no Grafana. As métricas ajudam a identificar gargalos, garantindo eficiência e desempenho.
 
 
-## Tecnologias Utilizadas
+## 🧑‍💻 Tecnologias Utilizadas
 
-### [Flask](https://flask.palletsprojects.com/en/stable/)
-* Versão 2.3.2
-Flask é um microframework web escrito em Python. Ele é leve, flexível e ideal para construir aplicações web e APIs de forma rápida e simples.
+### [Flask](https://flask.palletsprojects.com/)
+![Flask](https://img.shields.io/badge/Flask-2.3.2-000000?style=for-the-badge&logo=flask)
+Flask é um microframework web escrito em Python. Ele é leve, flexível e ideal para construir aplicações web e APIs de forma rápida e eficiente.
 
 ### [Python](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
 Python é uma linguagem de programação de alto nível, conhecida por sua simplicidade e legibilidade. É amplamente usada em desenvolvimento web, automação, análise de dados e machine learning.
 
 ### [Docker](https://www.docker.com/)
-Docker é uma plataforma de contêineres que permite empacotar aplicações e suas dependências em ambientes isolados e portáteis.
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+Docker é uma plataforma de contêinerização que permite empacotar aplicações e suas dependências em ambientes isolados e portáteis.
 
 ### [Grafana](https://grafana.com/)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 Grafana é uma ferramenta de visualização de dados que permite criar dashboards interativos para monitoramento e análise de métricas.
 
 ### [Prometheus](https://prometheus.io/)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 Prometheus é um sistema de monitoramento e alerta de código aberto, projetado para coletar e armazenar métricas de aplicações e infraestrutura.
 
 
@@ -29,7 +33,7 @@ Clone o projeto
   git clone https://github.com/TayaneCibely/ConsultaEnderecoAPI.git
 ```
 
-Criar a imagem no docker
+Criar as imagens no Docker
 
 ```bash
   docker-compose build
@@ -40,12 +44,12 @@ Subir os conteines
   docker-compose up
 ```
 
-Acessar as os links 
-* [Aplicação: Consulta de CEP](http://localhost:5000)
-* [Phometheus](http://localhost:9090)
-* [Grafana](http://localhost:3000)
+Acessar os links 
+* [Aplicação: Consulta de CEP](http://localhost:5000/)
+* [Phometheus](http://localhost:9090/)
+* [Grafana](http://localhost:3000/)
 
-Entrar no Grafana
+Acessar o Grafana
 ```bash
   Usuário: admin
   Senha: admin
@@ -61,7 +65,7 @@ Selecione:
    Prometheus
 ```
 
-Insira em connection:
+Em "Connection", insira:
 ```bash
    http://prometheus:9090
 ```
@@ -78,7 +82,7 @@ Em:
    Query inspector
 ```
 
-Insira esse em JSON:
+Insira o seguinte JSON:
 
 ```bash
    {
@@ -266,7 +270,7 @@ Click em:
 ### Realize testes, fazendo requisições na aplicação do Consulta de Cep
 
 
-##  🔗 Autores
+## Autores
 
 - [Izabel Nascimento](https://github.com/izabelnascimento)
 
