@@ -113,6 +113,7 @@ Insira o seguinte JSON:
           "mode": "none",
           "group": "A"
         },
+
         "axisPlacement": "auto",
         "axisLabel": "",
         "axisColorMode": "text",
@@ -269,6 +270,9 @@ Click em:
 
 ### Realize testes, fazendo requisições na aplicação do Consulta de Cep
 
+# Images
+![image](https://github.com/user-attachments/assets/a7db3802-c686-4deb-a8ff-fe0a2b0aedaa)
+![Imagem do WhatsApp de 2025-03-17 à(s) 00 11 12_a5ff4bd0](https://github.com/user-attachments/assets/92bc7bbd-3448-4b17-b3e6-01ffb9008489)
 
 ## Autores
 
